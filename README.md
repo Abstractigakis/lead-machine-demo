@@ -17,6 +17,9 @@ Primary hub (custom domain): https://abstractigakis.com/shop-tools
 - CPP / EI calculator: https://abstractigakis.com/ca/cpp.html
 - 2026 CPP / EI rates: https://abstractigakis.com/shop-tools/cpp-ei-2026
 
+Machine-readable 2026 rates (GST/HST, mileage, CPP/QPP/EI, TFSA/RRSP):
+https://abstractigakis.com/rates-2026.json
+
 github.io mirror: https://abstractigakis.github.io/lead-machine-demo/
 
 $49 pack is instant download. $150/month care is the recurring piece. $1,500 install is optional.
