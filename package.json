@@ -1,0 +1,22 @@
+{
+  "name": "canada-2026-tax-rates",
+  "version": "2026.1.1",
+  "private": true,
+  "description": "2026 Canada GST/HST, mileage, CPP/EI, QPP, TFSA, and RRSP figures as MIT JSON/CSV. Not tax advice. Calculators at abstractigakis.com/shop-tools.",
+  "homepage": "https://abstractigakis.com/data",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abstractigakis/lead-machine-demo.git"
+  },
+  "keywords": [
+    "canada",
+    "gst",
+    "hst",
+    "cpp",
+    "ei",
+    "tfsa",
+    "cra",
+    "2026"
+  ]
+}

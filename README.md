@@ -26,4 +26,6 @@ https://abstractigakis.com/payroll-2026.csv
 
 github.io mirror: https://abstractigakis.github.io/lead-machine-demo/
 
+jsDelivr: https://www.jsdelivr.com/package/gh/Abstractigakis/lead-machine-demo
+
 $49 pack is instant download. $150/month care is the recurring piece. $1,500 install is optional.
