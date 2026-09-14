@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lead Machine pack — download</title>
+    <meta name="robots" content="noindex" />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .files {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin: 20px 0;
+      }
+      .files article {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        padding: 16px 16px 8px;
+      }
+      @media (max-width: 800px) {
+        .files {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./offer.html">
+          <span class="mark" aria-hidden="true"></span>
+          Lead Machine
+        </a>
+        <nav>
+          <a href="./build.html">Generator</a>
+          <a href="#care">Care plan</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="kicker">Automatic delivery · no email required</p>
+          <h1>Your pack is on this page.</h1>
+          <p class="lede">
+            If PayPal just sent you here, save these files. The licensed
+            generator below drops the footer line.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <h2>Files</h2>
+          <div class="files">
+            <article>
+              <h3>West GTA HVAC demo</h3>
+              <p><a href="./index.html" download>index.html</a></p>
+            </article>
+            <article>
+              <h3>York Region HVAC</h3>
+              <p><a href="./newmarket.html" download>newmarket.html</a></p>
+            </article>
+            <article>
+              <h3>Plumbing demo</h3>
+              <p><a href="./plumbing.html" download>plumbing.html</a></p>
+            </article>
+            <article>
+              <h3>Styles + form</h3>
+              <p>
+                <a href="./styles.css" download>styles.css</a> ·
+                <a href="./app.js" download>app.js</a>
+              </p>
+            </article>
+            <article>
+              <h3>How to host</h3>
+              <p><a href="./BUYER.txt" download>BUYER.txt</a></p>
+            </article>
+            <article>
+              <h3>Licensed generator</h3>
+              <p><a href="./build.html?licensed=1">Open without footer</a></p>
+            </article>
+          </div>
+          <p class="fine">
+            Host the folder on GitHub Pages, Netlify, or any static host. Point
+            the domain when you are ready.
+          </p>
+        </div>
+      </section>
+      <section id="make" class="section muted">
+        <div class="wrap">
+          <h2>Licensed generator</h2>
+          <p>Same tool as the free page. This copy does not add our footer.</p>
+          <form id="builder">
+            <label>
+              Shop name
+              <input name="name" value="Cedar HVAC" required />
+            </label>
+            <label>
+              Trade
+              <select name="trade">
+                <option value="hvac">HVAC</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="electrical">Electrical</option>
+              </select>
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="tel" value="(905) 555-0144" required />
+            </label>
+            <label>
+              Shop email
+              <input name="email" type="email" value="jobs@example.com" />
+            </label>
+            <label class="wide">
+              Towns
+              <input name="towns" value="Vaughan, Richmond Hill, Aurora" />
+            </label>
+            <label>
+              Diagnostic (CAD)
+              <input name="diagnostic" type="number" min="0" value="89" />
+            </label>
+            <label>
+              After-hours (CAD)
+              <input name="afterHours" type="number" min="0" value="75" />
+            </label>
+            <button id="download" type="button">Download licensed page</button>
+          </form>
+        </div>
+      </section>
+      <section id="care" class="section">
+        <div class="wrap">
+          <h2>Optional recurring</h2>
+          <p>
+            $150 CAD / month: we host it, check the form, and change towns or
+            prices the same week you ask. Cancel any month.
+          </p>
+          <p>
+            <a
+              class="btn"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick-subscriptions&amp;business=ericstratigakis%40gmail.com&amp;item_name=Lead%20Machine%20care&amp;a3=150.00&amp;p3=1&amp;t3=M&amp;src=1&amp;sra=1&amp;currency_code=CAD&amp;no_shipping=1&amp;return=https%3A%2F%2Fabstractigakis.github.io%2Flead-machine-demo%2Fthanks.html"
+              >Start $150/month care</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./build.js"></script>
+  </body>
+</html>

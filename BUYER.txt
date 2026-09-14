@@ -1,5 +1,9 @@
 Lead Machine pack
-Price: $49 CAD template / $1,500 CAD install
+Price: $49 CAD instant pack / $1,500 CAD optional install / $150 CAD per month care
+
+Generator (free, then licensed after PayPal)
+https://abstractigakis.github.io/lead-machine-demo/build.html
+https://abstractigakis.github.io/lead-machine-demo/thanks.html
 
 What you get
 - index.html      HVAC demo (west GTA)

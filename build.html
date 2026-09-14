@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free HVAC, plumbing, and electrical website generator (Canada)</title>
+    <meta
+      name="description"
+      content="Type your shop name, towns, and phone. Download a one-page site that takes quote requests. $49 CAD unlocks the pack. Runs in your browser."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .builder-grid {
+        display: grid;
+        grid-template-columns: minmax(280px, 360px) 1fr;
+        gap: 20px;
+        align-items: start;
+      }
+      .preview-frame {
+        width: 100%;
+        min-height: 720px;
+        border: 1px solid var(--line);
+        background: var(--paper);
+      }
+      .pay-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+        margin-top: 16px;
+      }
+      @media (max-width: 900px) {
+        .builder-grid {
+          grid-template-columns: 1fr;
+        }
+        .preview-frame {
+          min-height: 560px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="ribbon" href="./offer.html#pack"
+      >Free generator. $49 CAD pack downloads after PayPal.</a
+    >
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./offer.html">
+          <span class="mark" aria-hidden="true"></span>
+          Lead Machine
+        </a>
+        <nav>
+          <a href="./offer.html">Pricing</a>
+          <a href="./tfsa.html">TFSA calculator</a>
+          <a href="#make">Generator</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="kicker">No account · no email us · file lands on your computer</p>
+          <h1>Build the shop site. Download it. Host it anywhere.</h1>
+          <p class="lede">
+            HVAC, plumbing, or electrical. The form opens a message to your
+            inbox. Nothing is stored on our server. Pay $49 CAD if you want
+            the full pack without the footer line.
+          </p>
+        </div>
+      </section>
+      <section id="make" class="section">
+        <div class="wrap builder-grid">
+          <form id="builder">
+            <label>
+              Shop name
+              <input name="name" value="Cedar HVAC" required />
+            </label>
+            <label>
+              Trade
+              <select name="trade">
+                <option value="hvac">HVAC</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="electrical">Electrical</option>
+              </select>
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="tel" value="(905) 555-0144" required />
+            </label>
+            <label>
+              Shop email (for the quote form)
+              <input name="email" type="email" value="jobs@example.com" />
+            </label>
+            <label class="wide">
+              Towns (comma separated)
+              <input name="towns" value="Vaughan, Richmond Hill, Aurora" />
+            </label>
+            <label>
+              Diagnostic (CAD)
+              <input name="diagnostic" type="number" min="0" value="89" />
+            </label>
+            <label>
+              After-hours (CAD)
+              <input name="afterHours" type="number" min="0" value="75" />
+            </label>
+            <button id="download" type="button">Download this page</button>
+            <p class="form-status">
+              Preview updates as you type. The download is one HTML file.
+            </p>
+          </form>
+          <iframe
+            id="preview"
+            class="preview-frame"
+            title="Live preview of the generated shop page"
+          ></iframe>
+        </div>
+      </section>
+      <section class="section muted">
+        <div class="wrap">
+          <h2>Unlock the pack</h2>
+          <p>
+            $49 CAD via PayPal goods and services. You get the HVAC, plumbing,
+            and York Region demos, the stylesheet, and a licensed generator
+            (no Lead Machine footer). Recurring option is the $150/month care
+            plan if you want us to host and change copy.
+          </p>
+          <div class="pay-row">
+            <a
+              class="btn"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ericstratigakis%40gmail.com&amp;item_name=Lead%20Machine%20pack&amp;amount=49.00&amp;currency_code=CAD&amp;no_shipping=1&amp;button_subtype=services&amp;return=https%3A%2F%2Fabstractigakis.github.io%2Flead-machine-demo%2Fthanks.html&amp;rm=1&amp;cancel_return=https%3A%2F%2Fabstractigakis.github.io%2Flead-machine-demo%2Fbuild.html"
+              >Pay $49 CAD</a
+            >
+            <a href="./thanks.html?licensed=1">Already paid — open the pack</a>
+          </div>
+          <p class="fine">
+            PayPal sends you back to the download page. Goods and services
+            only, not friends and family.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./build.js"></script>
+  </body>
+</html>

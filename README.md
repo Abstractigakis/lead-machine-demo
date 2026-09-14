@@ -1,11 +1,12 @@
 # Lead Machine
 
-Free HVAC and plumbing demo sites. Paid install: your shop live in five days.
+Self-serve shop-site pipeline. No sales email required.
 
+- Generator (free): https://abstractigakis.github.io/lead-machine-demo/build.html
+- Pack after PayPal ($49 CAD): https://abstractigakis.github.io/lead-machine-demo/thanks.html
+- Offer: https://abstractigakis.github.io/lead-machine-demo/offer.html
 - HVAC demo: https://abstractigakis.github.io/lead-machine-demo/
 - Plumbing demo: https://abstractigakis.github.io/lead-machine-demo/plumbing.html
-- Offer and PayPal deposit: https://abstractigakis.github.io/lead-machine-demo/offer.html
+- TFSA estimator: https://abstractigakis.github.io/lead-machine-demo/tfsa.html
 
-Install is $1,500 CAD. $750 deposit via PayPal goods and services before work starts.
-
-Also: [2026 TFSA / RRSP room estimator](https://abstractigakis.github.io/lead-machine-demo/tfsa.html) — free, $9 support via PayPal.
+$49 pack is instant download. $150/month care is the recurring piece. $1,500 install is optional.
