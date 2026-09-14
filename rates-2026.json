@@ -4,6 +4,7 @@
   "disclaimer": "Published government figures compiled for convenience. CRA, Finance Canada, ESDC, Retraite Québec, and Revenu Québec win. Not tax advice. Since 1 Jan 2013, QST is 9.975% on the selling price excluding GST.",
   "homepage": "https://abstractigakis.com/shop-tools",
   "json": "https://abstractigakis.com/rates-2026.json",
+  "cdn": "https://cdn.jsdelivr.net/gh/Abstractigakis/lead-machine-demo/rates-2026.json",
   "calculators": {
     "hst": "https://abstractigakis.com/ca/hst.html",
     "tvh": "https://abstractigakis.com/ca/tvh.html",

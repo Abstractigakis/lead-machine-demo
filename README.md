@@ -18,7 +18,9 @@ Primary hub (custom domain): https://abstractigakis.com/shop-tools
 - 2026 CPP / EI rates: https://abstractigakis.com/shop-tools/cpp-ei-2026
 
 Machine-readable 2026 rates (GST/HST, mileage, CPP/QPP/EI, TFSA/RRSP):
+https://abstractigakis.com/data
 https://abstractigakis.com/rates-2026.json
+https://cdn.jsdelivr.net/gh/Abstractigakis/lead-machine-demo/rates-2026.json
 https://abstractigakis.com/sales-tax-2026.csv
 https://abstractigakis.com/payroll-2026.csv
 
