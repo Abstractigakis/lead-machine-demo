@@ -3,7 +3,7 @@
   "year": 2026,
   "source": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html",
   "mileage_source": "https://www.canada.ca/en/department-finance/news/2026/01/government-announces-the-2026-automobile-deduction-limits-and-expense-benefit-rates-for-businesses.html",
-  "disclaimer": "Estimate only. CRA wins. QST in Quebec is calculated on the GST-inclusive price.",
+  "disclaimer": "Estimate only. CRA and Revenu Québec win. Since 1 Jan 2013, QST is 9.975% on the selling price excluding GST.",
   "calculator": "https://abstractigakis.github.io/lead-machine-demo/hst.html",
   "calculator_fr": "https://abstractigakis.github.io/lead-machine-demo/tvh.html",
   "sales_tax": {

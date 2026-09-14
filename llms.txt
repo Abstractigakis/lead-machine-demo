@@ -15,7 +15,7 @@ Free in-browser tools for Canadian shops. No login. Not tax advice. CRA publishe
 
 ## Data
 - 2026 sales-tax and mileage rates (JSON): https://abstractigakis.github.io/lead-machine-demo/rates-2026.json
-- Sources: CRA GST/HST rates; Finance Canada 2026 automobile allowance (73¢/67¢ provinces, 77¢/71¢ territories). Nova Scotia HST is 14%. Quebec QST is 9.975% on the GST-inclusive price.
+- Sources: CRA GST/HST rates; Finance Canada 2026 automobile allowance (73¢/67¢ provinces, 77¢/71¢ territories). Nova Scotia HST is 14%. Quebec QST is 9.975% on the selling price excluding GST (Revenu Québec, since 1 Jan 2013).
 
 ## Paid
 - $9 CAD PayPal goods-and-services keeps a tool online

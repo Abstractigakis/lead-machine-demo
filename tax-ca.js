@@ -1,17 +1,17 @@
 const PROVINCES = {
-  AB: { name: "Alberta", nameFr: "Alberta", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
-  BC: { name: "British Columbia", nameFr: "Colombie-Britannique", gst: 0.05, pst: 0.07, hst: 0, qstOnGst: false },
-  MB: { name: "Manitoba", nameFr: "Manitoba", gst: 0.05, pst: 0.07, hst: 0, qstOnGst: false },
-  NB: { name: "New Brunswick", nameFr: "Nouveau-Brunswick", gst: 0, pst: 0, hst: 0.15, qstOnGst: false },
-  NL: { name: "Newfoundland and Labrador", nameFr: "Terre-Neuve-et-Labrador", gst: 0, pst: 0, hst: 0.15, qstOnGst: false },
-  NS: { name: "Nova Scotia", nameFr: "Nouvelle-Écosse", gst: 0, pst: 0, hst: 0.14, qstOnGst: false },
-  NT: { name: "Northwest Territories", nameFr: "Territoires du Nord-Ouest", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
-  NU: { name: "Nunavut", nameFr: "Nunavut", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
-  ON: { name: "Ontario", nameFr: "Ontario", gst: 0, pst: 0, hst: 0.13, qstOnGst: false },
-  PE: { name: "Prince Edward Island", nameFr: "Île-du-Prince-Édouard", gst: 0, pst: 0, hst: 0.15, qstOnGst: false },
-  QC: { name: "Quebec", nameFr: "Québec", gst: 0.05, pst: 0.09975, hst: 0, qstOnGst: true },
-  SK: { name: "Saskatchewan", nameFr: "Saskatchewan", gst: 0.05, pst: 0.06, hst: 0, qstOnGst: false },
-  YT: { name: "Yukon", nameFr: "Yukon", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
+  AB: { name: "Alberta", nameFr: "Alberta", gst: 0.05, pst: 0, hst: 0 },
+  BC: { name: "British Columbia", nameFr: "Colombie-Britannique", gst: 0.05, pst: 0.07, hst: 0 },
+  MB: { name: "Manitoba", nameFr: "Manitoba", gst: 0.05, pst: 0.07, hst: 0 },
+  NB: { name: "New Brunswick", nameFr: "Nouveau-Brunswick", gst: 0, pst: 0, hst: 0.15 },
+  NL: { name: "Newfoundland and Labrador", nameFr: "Terre-Neuve-et-Labrador", gst: 0, pst: 0, hst: 0.15 },
+  NS: { name: "Nova Scotia", nameFr: "Nouvelle-Écosse", gst: 0, pst: 0, hst: 0.14 },
+  NT: { name: "Northwest Territories", nameFr: "Territoires du Nord-Ouest", gst: 0.05, pst: 0, hst: 0 },
+  NU: { name: "Nunavut", nameFr: "Nunavut", gst: 0.05, pst: 0, hst: 0 },
+  ON: { name: "Ontario", nameFr: "Ontario", gst: 0, pst: 0, hst: 0.13 },
+  PE: { name: "Prince Edward Island", nameFr: "Île-du-Prince-Édouard", gst: 0, pst: 0, hst: 0.15 },
+  QC: { name: "Quebec", nameFr: "Québec", gst: 0.05, pst: 0.09975, hst: 0 },
+  SK: { name: "Saskatchewan", nameFr: "Saskatchewan", gst: 0.05, pst: 0.06, hst: 0 },
+  YT: { name: "Yukon", nameFr: "Yukon", gst: 0.05, pst: 0, hst: 0 },
 };
 
 const KM_2026 = {
@@ -34,7 +34,6 @@ function cad(n, locale) {
 function factor(code) {
   const row = PROVINCES[code] || PROVINCES.ON;
   if (row.hst) return 1 + row.hst;
-  if (row.qstOnGst) return (1 + row.gst) * (1 + row.pst);
   return 1 + row.gst + row.pst;
 }
 
@@ -43,7 +42,7 @@ function taxOn(net, code) {
   net = cents(net);
   const gst = cents(net * row.gst);
   const hst = cents(net * row.hst);
-  const pst = cents(row.qstOnGst ? (net + gst) * row.pst : net * row.pst);
+  const pst = cents(net * row.pst);
   const tax = cents(gst + hst + pst);
   return { row, net, gst, hst, pst, tax, total: cents(net + tax) };
 }

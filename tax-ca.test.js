@@ -14,11 +14,11 @@ test("Nova Scotia HST 14%", () => {
   assert.equal(out.total, 114);
 });
 
-test("Quebec GST plus QST on GST-inclusive price", () => {
+test("Quebec GST plus QST on the price before GST (since 2013)", () => {
   const out = taxOn(100, "QC");
   assert.equal(out.gst, 5);
-  assert.equal(out.pst, 10.47);
-  assert.equal(out.total, 115.47);
+  assert.equal(out.pst, 9.98);
+  assert.equal(out.total, 114.98);
 });
 
 test("Alberta GST only", () => {
