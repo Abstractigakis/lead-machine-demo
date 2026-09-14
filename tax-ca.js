@@ -1,17 +1,17 @@
 const PROVINCES = {
-  AB: { name: "Alberta", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
-  BC: { name: "British Columbia", gst: 0.05, pst: 0.07, hst: 0, qstOnGst: false },
-  MB: { name: "Manitoba", gst: 0.05, pst: 0.07, hst: 0, qstOnGst: false },
-  NB: { name: "New Brunswick", gst: 0, pst: 0, hst: 0.15, qstOnGst: false },
-  NL: { name: "Newfoundland and Labrador", gst: 0, pst: 0, hst: 0.15, qstOnGst: false },
-  NS: { name: "Nova Scotia", gst: 0, pst: 0, hst: 0.14, qstOnGst: false },
-  NT: { name: "Northwest Territories", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
-  NU: { name: "Nunavut", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
-  ON: { name: "Ontario", gst: 0, pst: 0, hst: 0.13, qstOnGst: false },
-  PE: { name: "Prince Edward Island", gst: 0, pst: 0, hst: 0.15, qstOnGst: false },
-  QC: { name: "Quebec", gst: 0.05, pst: 0.09975, hst: 0, qstOnGst: true },
-  SK: { name: "Saskatchewan", gst: 0.05, pst: 0.06, hst: 0, qstOnGst: false },
-  YT: { name: "Yukon", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
+  AB: { name: "Alberta", nameFr: "Alberta", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
+  BC: { name: "British Columbia", nameFr: "Colombie-Britannique", gst: 0.05, pst: 0.07, hst: 0, qstOnGst: false },
+  MB: { name: "Manitoba", nameFr: "Manitoba", gst: 0.05, pst: 0.07, hst: 0, qstOnGst: false },
+  NB: { name: "New Brunswick", nameFr: "Nouveau-Brunswick", gst: 0, pst: 0, hst: 0.15, qstOnGst: false },
+  NL: { name: "Newfoundland and Labrador", nameFr: "Terre-Neuve-et-Labrador", gst: 0, pst: 0, hst: 0.15, qstOnGst: false },
+  NS: { name: "Nova Scotia", nameFr: "Nouvelle-Écosse", gst: 0, pst: 0, hst: 0.14, qstOnGst: false },
+  NT: { name: "Northwest Territories", nameFr: "Territoires du Nord-Ouest", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
+  NU: { name: "Nunavut", nameFr: "Nunavut", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
+  ON: { name: "Ontario", nameFr: "Ontario", gst: 0, pst: 0, hst: 0.13, qstOnGst: false },
+  PE: { name: "Prince Edward Island", nameFr: "Île-du-Prince-Édouard", gst: 0, pst: 0, hst: 0.15, qstOnGst: false },
+  QC: { name: "Quebec", nameFr: "Québec", gst: 0.05, pst: 0.09975, hst: 0, qstOnGst: true },
+  SK: { name: "Saskatchewan", nameFr: "Saskatchewan", gst: 0.05, pst: 0.06, hst: 0, qstOnGst: false },
+  YT: { name: "Yukon", nameFr: "Yukon", gst: 0.05, pst: 0, hst: 0, qstOnGst: false },
 };
 
 const KM_2026 = {
@@ -23,8 +23,8 @@ function cents(n) {
   return Math.round((Number(n) + Number.EPSILON) * 100) / 100;
 }
 
-function cad(n) {
-  return new Intl.NumberFormat("en-CA", {
+function cad(n, locale) {
+  return new Intl.NumberFormat(locale || "en-CA", {
     style: "currency",
     currency: "CAD",
     minimumFractionDigits: 2,
@@ -52,12 +52,13 @@ function taxFromTotal(total, code) {
   return taxOn(cents(Number(total) / factor(code)), code);
 }
 
-function fillProvinceSelect(select, selected) {
+function fillProvinceSelect(select, selected, lang) {
   if (!select) return;
+  const fr = lang === "fr";
   select.innerHTML = Object.entries(PROVINCES)
     .map(
       ([code, row]) =>
-        `<option value="${code}"${code === selected ? " selected" : ""}>${row.name}</option>`,
+        `<option value="${code}"${code === selected ? " selected" : ""}>${fr ? row.nameFr : row.name}</option>`,
     )
     .join("");
 }

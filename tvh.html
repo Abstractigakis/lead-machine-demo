@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculatrice TPS/TVH/TVP 2026 (Canada)</title>
+    <meta
+      name="description"
+      content="Ajoutez ou retirez la TPS, la TVH ou la TVP sur un prix. Taux ARC 2026, dont 14 % en Nouvelle-Écosse et TVQ sur le prix avec TPS au Québec. Pas un conseil fiscal."
+    />
+    <link rel="alternate" hreflang="en-CA" href="https://abstractigakis.github.io/lead-machine-demo/hst.html" />
+    <link rel="alternate" hreflang="fr-CA" href="https://abstractigakis.github.io/lead-machine-demo/tvh.html" />
+    <meta property="og:title" content="Calculatrice TPS/TVH/TVP 2026" />
+    <meta
+      property="og:description"
+      content="Ajoutez ou retirez la taxe de vente pour chaque province. Gratuit, dans le navigateur."
+    />
+    <meta
+      property="og:url"
+      content="https://abstractigakis.github.io/lead-machine-demo/tvh.html"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="ribbon" href="./build.html">Site pour un commerce : générateur gratuit, trousse 49 $ CA</a>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./tools.html">
+          <span class="mark" aria-hidden="true"></span>
+          Taxe sur une facture
+        </a>
+        <nav>
+          <a href="./hst.html">English</a>
+          <a href="./invoice.html">Facture</a>
+          <a href="#pay">Payer 9 $</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="kicker">Taux ARC · 2026 · s’exécute sur cet appareil</p>
+          <h1>Combien de taxe ajouter à cette facture?</h1>
+          <p class="lede">
+            Choisissez le lieu de la fourniture. Au Québec, la TVQ se calcule
+            sur le prix incluant la TPS. Vérifiez sur Canada.ca avant de
+            produire une déclaration.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap quote-grid">
+          <form id="tax-form">
+            <label>
+              Montant (CAD)
+              <input name="amount" type="number" min="0" step="0.01" value="1500" required />
+            </label>
+            <label>
+              Ce montant
+              <select name="mode">
+                <option value="net">est avant taxe</option>
+                <option value="total">inclut déjà la taxe</option>
+              </select>
+            </label>
+            <label class="wide">
+              Province ou territoire
+              <select name="province"></select>
+            </label>
+            <button type="submit">Calculer la taxe</button>
+            <p class="form-status" id="tax-status" role="status"></p>
+          </form>
+          <aside class="panel" id="result" hidden>
+            <h2>Détail</h2>
+            <ul class="price">
+              <li><span>Avant taxe</span><strong id="out-net">—</strong></li>
+              <li><span>TPS</span><strong id="out-gst">—</strong></li>
+              <li><span>TVH</span><strong id="out-hst">—</strong></li>
+              <li><span>TVP / TVQ</span><strong id="out-pst">—</strong></li>
+              <li><span>Taxe</span><strong id="out-tax">—</strong></li>
+              <li><span>Total</span><strong id="out-total">—</strong></li>
+            </ul>
+            <p class="panel-note">
+              Source :
+              <a href="https://www.canada.ca/fr/agence-revenu/services/impot/entreprises/sujets/tps-tvh-entreprises/facturer-percevoir-quel-taux/calculatrice.html">Calculatrice de la TPS/TVH de l’ARC</a>.
+            </p>
+          </aside>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <h2>Taux 2026 utilisés ici</h2>
+          <ul class="towns">
+            <li>Alberta et territoires : TPS 5 %</li>
+            <li>Colombie-Britannique : TPS 5 % + TVP 7 %</li>
+            <li>Manitoba : TPS 5 % + TVP 7 %</li>
+            <li>Saskatchewan : TPS 5 % + TVP 6 %</li>
+            <li>Ontario : TVH 13 %</li>
+            <li>Nouvelle-Écosse : TVH 14 %</li>
+            <li>Nouveau-Brunswick, Terre-Neuve-et-Labrador, Î.-P.-É. : TVH 15 %</li>
+            <li>Québec : TPS 5 % + TVQ 9,975 % sur le prix incluant la TPS</li>
+          </ul>
+        </div>
+      </section>
+      <section id="pay" class="section muted">
+        <div class="wrap">
+          <h2>Si ça a évité une erreur de remise</h2>
+          <p>
+            L’outil est gratuit. 9 $ CA par PayPal (biens et services) le
+            maintient en ligne. Pas un conseil fiscal.
+          </p>
+          <p>
+            <a
+              class="btn"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ericstratigakis%40gmail.com&amp;item_name=Soutien%20calculatrice%20TVH&amp;amount=9.00&amp;currency_code=CAD&amp;no_shipping=1&amp;button_subtype=services&amp;return=https%3A%2F%2Fabstractigakis.github.io%2Flead-machine-demo%2Fthanks.html&amp;rm=1"
+              >Payer 9 $ CA</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./tax-ca.js"></script>
+    <script src="./tvh.js"></script>
+  </body>
+</html>

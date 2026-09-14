@@ -1,0 +1,28 @@
+{
+  "currency": "CAD",
+  "year": 2026,
+  "source": "https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html",
+  "mileage_source": "https://www.canada.ca/en/department-finance/news/2026/01/government-announces-the-2026-automobile-deduction-limits-and-expense-benefit-rates-for-businesses.html",
+  "disclaimer": "Estimate only. CRA wins. QST in Quebec is calculated on the GST-inclusive price.",
+  "calculator": "https://abstractigakis.github.io/lead-machine-demo/hst.html",
+  "calculator_fr": "https://abstractigakis.github.io/lead-machine-demo/tvh.html",
+  "sales_tax": {
+    "AB": { "gst": 0.05, "pst": 0, "hst": 0, "qst_on_gst": false },
+    "BC": { "gst": 0.05, "pst": 0.07, "hst": 0, "qst_on_gst": false },
+    "MB": { "gst": 0.05, "pst": 0.07, "hst": 0, "qst_on_gst": false },
+    "NB": { "gst": 0, "pst": 0, "hst": 0.15, "qst_on_gst": false },
+    "NL": { "gst": 0, "pst": 0, "hst": 0.15, "qst_on_gst": false },
+    "NS": { "gst": 0, "pst": 0, "hst": 0.14, "qst_on_gst": false },
+    "NT": { "gst": 0.05, "pst": 0, "hst": 0, "qst_on_gst": false },
+    "NU": { "gst": 0.05, "pst": 0, "hst": 0, "qst_on_gst": false },
+    "ON": { "gst": 0, "pst": 0, "hst": 0.13, "qst_on_gst": false },
+    "PE": { "gst": 0, "pst": 0, "hst": 0.15, "qst_on_gst": false },
+    "QC": { "gst": 0.05, "pst": 0.09975, "hst": 0, "qst_on_gst": true },
+    "SK": { "gst": 0.05, "pst": 0.06, "hst": 0, "qst_on_gst": false },
+    "YT": { "gst": 0.05, "pst": 0, "hst": 0, "qst_on_gst": false }
+  },
+  "mileage_per_km": {
+    "province": { "first_5000": 0.73, "after": 0.67 },
+    "territory": { "first_5000": 0.77, "after": 0.71 }
+  }
+}

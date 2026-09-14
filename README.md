@@ -10,6 +10,8 @@ Self-serve shop-site pipeline. No sales email required.
 - Plumbing demo: https://abstractigakis.github.io/lead-machine-demo/plumbing.html
 - TFSA estimator: https://abstractigakis.github.io/lead-machine-demo/tfsa.html
 - HST calculator: https://abstractigakis.github.io/lead-machine-demo/hst.html
+- Calculatrice TVH (fr): https://abstractigakis.github.io/lead-machine-demo/tvh.html
+- 2026 rates JSON: https://abstractigakis.github.io/lead-machine-demo/rates-2026.json
 - 2026 mileage: https://abstractigakis.github.io/lead-machine-demo/km.html
 - Invoice: https://abstractigakis.github.io/lead-machine-demo/invoice.html
 
