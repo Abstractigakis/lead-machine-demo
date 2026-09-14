@@ -23,6 +23,7 @@ https://abstractigakis.com/rates-2026.json
 https://cdn.jsdelivr.net/gh/Abstractigakis/lead-machine-demo/rates-2026.json
 https://abstractigakis.com/sales-tax-2026.csv
 https://abstractigakis.com/payroll-2026.csv
+https://github.com/Abstractigakis/canada-2026-tax-rates
 
 github.io mirror: https://abstractigakis.github.io/lead-machine-demo/
 
