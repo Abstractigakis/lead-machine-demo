@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="fr-CA">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="canonical" href="https://abstractigakis.com/ca/rrq.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Calculatrice RRQ, RRQ2 et AE 2026 (Québec)</title>
+    <meta
+      name="description"
+      content="Estimez la RRQ 2026 (6,30 % jusqu’à 74 600 $), la 2e cotisation supplémentaire (4 % jusqu’à 85 000 $) et l’AE 1,30 %. Pas un conseil fiscal."
+    />
+    <link rel="alternate" hreflang="en-CA" href="https://abstractigakis.com/ca/cpp.html" />
+    <link rel="alternate" hreflang="fr-CA" href="https://abstractigakis.com/ca/rrq.html" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="ribbon" href="./tvh.html"
+      >Aussi : calculatrice TPS/TVH et trousse de site 49 $ CA</a
+    >
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./rrq.html">
+          <span class="mark" aria-hidden="true"></span>
+          Paie
+        </a>
+        <nav>
+          <a href="./cpp.html">English</a>
+          <a href="./tvh.html">TPS/TVH</a>
+          <a href="#pay">Payer 9 $</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="kicker">Québec · paie 2026 · s’exécute sur cet appareil</p>
+          <h1>Combien de RRQ et d’AE sur ce salaire?</h1>
+          <p class="lede">
+            Taux 2026 : RRQ 6,30 % entre 3 500 $ et le MGA de 74 600 $ (max
+            4 479,30 $), plus 4 % jusqu’à 85 000 $ (max 416 $). AE 1,30 % sur
+            68 900 $ (max 895,70 $). Estimation annuelle, pas une table de
+            période de paie.
+            <a href="https://abstractigakis.com/shop-tools/rrq-2026">Taux 2026</a>.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap quote-grid">
+          <form id="cpp-form">
+            <label>
+              Gains admissibles cette année (CAD)
+              <input
+                name="pensionable"
+                type="number"
+                min="0"
+                step="1"
+                value="74600"
+                required
+              />
+            </label>
+            <label>
+              Gains assurables cette année (CAD)
+              <input
+                name="insurable"
+                type="number"
+                min="0"
+                step="1"
+                value="68900"
+                required
+              />
+            </label>
+            <label>
+              Lieu de l’emploi
+              <select name="region">
+                <option value="qc" selected>Québec (RRQ + AE réduite)</option>
+                <option value="ca">Hors Québec (RPC)</option>
+              </select>
+            </label>
+            <button type="submit">Estimer les cotisations</button>
+            <p class="form-status" id="cpp-status" role="status"></p>
+          </form>
+          <aside class="panel" id="result" hidden>
+            <h2>Année employé / employeur</h2>
+            <ul class="price">
+              <li>
+                <span>RRQ ou RPC</span><strong id="out-cpp">—</strong>
+              </li>
+              <li>
+                <span>2e cotisation (RRQ2 / RPC2)</span
+                ><strong id="out-cpp2">—</strong>
+              </li>
+              <li>
+                <span>AE (employé)</span><strong id="out-ei">—</strong>
+              </li>
+              <li>
+                <span>Total employé</span><strong id="out-employee">—</strong>
+              </li>
+              <li>
+                <span>Part employeur + AE</span
+                ><strong id="out-employer">—</strong>
+              </li>
+            </ul>
+            <p class="panel-note">
+              La colonne employeur est la part RRQ/RPC plus 1,4 × AE. Le RQAP
+              n’est pas inclus. Vérifiez les tables de Revenu Québec.
+            </p>
+          </aside>
+        </div>
+      </section>
+      <section id="pay" class="section muted">
+        <div class="wrap">
+          <h2>Si ça a évité une erreur de paie</h2>
+          <p>
+            L’outil est gratuit. 9 $ CA par PayPal (biens et services) le
+            maintient en ligne. Pas un conseil fiscal.
+          </p>
+          <p>
+            <a
+              class="btn"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ericstratigakis%40gmail.com&amp;item_name=Soutien%20calculatrice%20RRQ&amp;amount=9.00&amp;currency_code=CAD&amp;no_shipping=1&amp;button_subtype=services&amp;return=https%3A%2F%2Fabstractigakis.com%2Fca%2Fthanks.html&amp;rm=1"
+              >Payer 9 $ CA</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./tax-ca.js"></script>
+    <script src="./cpp.js"></script>
+  </body>
+</html>
