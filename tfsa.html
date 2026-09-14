@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 TFSA and RRSP room calculator (Canada)</title>
+    <meta
+      name="description"
+      content="Estimate 2026 TFSA contribution room from the year you turned 18, plus this year’s RRSP room from earned income. Not tax advice. Verify with CRA."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="ribbon" href="./offer.html">Also: a $1,500 site for GTA trades — see Lead Machine</a>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./tfsa.html">
+          <span class="mark" aria-hidden="true"></span>
+          Room check
+        </a>
+        <nav>
+          <a href="./offer.html">Lead Machine</a>
+          <a href="#pay">Pay $9</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="kicker">Canada · 2026 limits · runs on this device</p>
+          <h1>How much TFSA and RRSP room do you still have?</h1>
+          <p class="lede">
+            Uses CRA’s 2026 TFSA dollar limit of $7,000 and the 2026 RRSP
+            dollar limit of $33,810. This is an estimate. Your Notice of
+            Assessment wins.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap quote-grid">
+          <form id="room-form">
+            <label>
+              Year you turned 18 (or became a resident)
+              <input name="age18" type="number" min="1991" max="2026" value="2009" required />
+            </label>
+            <label>
+              TFSA contributions still in the account (CAD)
+              <input name="tfsaIn" type="number" min="0" step="1" value="0" required />
+            </label>
+            <label>
+              TFSA withdrawn in 2025 (comes back in 2026)
+              <input name="tfsaOut25" type="number" min="0" step="1" value="0" required />
+            </label>
+            <label>
+              2025 earned income (for 2026 RRSP)
+              <input name="earned" type="number" min="0" step="1" value="0" required />
+            </label>
+            <label>
+              Unused RRSP room carried forward
+              <input name="rrspCarry" type="number" min="0" step="1" value="0" required />
+            </label>
+            <label>
+              Pension adjustment (if any)
+              <input name="pa" type="number" min="0" step="1" value="0" required />
+            </label>
+            <button type="submit">Estimate room</button>
+            <p class="form-status" id="room-status" role="status"></p>
+          </form>
+          <aside class="panel" id="result" hidden>
+            <h2>Estimate</h2>
+            <ul class="price">
+              <li><span>TFSA room now</span><strong id="tfsa-out">—</strong></li>
+              <li><span>Lifetime TFSA if never used</span><strong id="tfsa-life">—</strong></li>
+              <li><span>2026 RRSP room</span><strong id="rrsp-out">—</strong></li>
+            </ul>
+            <p class="panel-note">
+              Over-contributing a TFSA can cost 1% per month. Confirm in
+              <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account/contributing/calculate-room.html">CRA’s room guide</a>.
+            </p>
+          </aside>
+        </div>
+      </section>
+      <section id="pay" class="section muted">
+        <div class="wrap">
+          <h2>If this saved you a penalty</h2>
+          <p>
+            The calculator is free. $9 CAD via PayPal goods and services keeps
+            it online. Not tax advice, not a filing service.
+          </p>
+          <p>
+            <a
+              class="btn"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ericstratigakis%40gmail.com&amp;item_name=Room%20check%20support&amp;amount=9.00&amp;currency_code=CAD&amp;no_shipping=1&amp;button_subtype=services"
+              >Pay $9 CAD</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="foot">
+      <div class="wrap foot-bar">
+        <p>Limits from CRA / published 2026 dollar amounts. Verify before you contribute.</p>
+        <p><a href="./offer.html">Lead Machine</a> for GTA shops.</p>
+      </div>
+    </footer>
+    <script src="./tfsa.js"></script>
+  </body>
+</html>
