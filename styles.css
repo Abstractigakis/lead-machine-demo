@@ -70,6 +70,22 @@ a {
   color: var(--accent);
 }
 
+.ribbon {
+  display: block;
+  background: var(--ink);
+  color: var(--paper);
+  text-align: center;
+  text-decoration: none;
+  font-family: "Avenir Next", "Segoe UI", Helvetica, sans-serif;
+  font-size: 0.82rem;
+  font-weight: 650;
+  padding: 8px 12px;
+}
+
+.ribbon:hover {
+  color: var(--accent-ink);
+}
+
 .skip {
   position: absolute;
   left: -999px;

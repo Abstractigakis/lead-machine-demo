@@ -24,6 +24,12 @@
         font-family: "Avenir Next", "Segoe UI", Helvetica, sans-serif;
         font-size: 1.6rem;
       }
+      .pay {
+        margin-top: 28px;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        padding: 20px;
+      }
       @media (max-width: 800px) {
         .tiers {
           grid-template-columns: 1fr;
@@ -51,9 +57,9 @@
           <p class="kicker">For HVAC, plumbing, and similar GTA shops</p>
           <h1>A site that answers when the system fails.</h1>
           <p class="lede">
-            Most contractor sites hide the phone under stock photos. This is a
-            one-page machine: price before the truck, a short form, and a text
-            to the shop. PayPal deposit before any work starts.
+            The demos are free to click. The product is putting your name,
+            towns, and prices on it and wiring the form to your phone. PayPal
+            deposit before any work starts.
           </p>
         </div>
       </section>
@@ -61,15 +67,12 @@
         <div class="wrap">
           <div class="tiers">
             <article>
-              <h2>Template</h2>
-              <p><strong>$49 CAD</strong></p>
+              <h2>Demos</h2>
+              <p><strong>Free</strong></p>
               <p>
-                HVAC and plumbing demos, CSS, and the form script. You change
-                name, towns, and prices. No monthly fee.
-              </p>
-              <p class="fine">
-                Pay as goods and services on PayPal. Files sent after the
-                payment clears.
+                <a href="./index.html">HVAC</a> and
+                <a href="./plumbing.html">plumbing</a> one-pagers. Fork or
+                copy. No monthly fee.
               </p>
             </article>
             <article>
@@ -77,7 +80,7 @@
               <p><strong>$1,500 CAD</strong></p>
               <p>
                 Your name, area, prices, and form live in five days. $750 CAD
-                deposit on PayPal (goods and services). You keep the files.
+                deposit on PayPal as goods and services. You keep the files.
               </p>
               <ul>
                 <li>Custom copy for one trade and one metro</li>
@@ -87,15 +90,35 @@
               </ul>
             </article>
           </div>
+          <div class="pay" id="pay">
+            <h2>Pay the deposit</h2>
+            <p>
+              $750 CAD, goods and services, memo with your shop name. Work
+              starts when PayPal shows the payment. Unused deposit refunded if
+              work has not started. Balance on the day it goes live.
+            </p>
+            <p>
+              <a
+                class="btn"
+                href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ericstratigakis%40gmail.com&amp;item_name=Lead%20Machine%20deposit&amp;amount=750.00&amp;currency_code=CAD&amp;no_shipping=1&amp;button_subtype=services"
+                >Pay $750 CAD deposit</a
+              >
+            </p>
+            <p class="fine">
+              Or send goods and services in PayPal to
+              ericstratigakis@gmail.com. Do not use friends and family.
+            </p>
+            <p>
+              <a
+                href="mailto:ericstratigakis@gmail.com?subject=Lead%20Machine%20install&amp;body=Shop%20name%3A%0ATown%3A%0APhone%3A%0A"
+                >Email the shop name first</a
+              >
+              if you want a written scope before you pay.
+            </p>
+          </div>
           <p>
             Not included: ads, ranking you on Google in a week, or a 40-page
             brochure site. Those are different jobs.
-          </p>
-          <p class="fine">
-            Deposit: PayPal goods and services, $750 CAD, memo “Lead Machine
-            deposit — {shop name}”. Balance due on the day it goes live.
-            No work without the deposit. Refund the unused deposit if we have
-            not started.
           </p>
         </div>
       </section>
