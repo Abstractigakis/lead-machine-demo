@@ -4,17 +4,17 @@ const result = document.getElementById("result");
 
 fillProvinceSelect(form?.elements.province, "ON");
 
-form?.addEventListener("submit", (event) => {
-  event.preventDefault();
+function paint() {
   const data = Object.fromEntries(new FormData(form));
-  const net = Number(data.net);
-  if (!(net >= 0)) {
-    status.textContent = "Enter a price of zero or more.";
+  const amount = Number(data.amount);
+  if (!(amount >= 0)) {
+    status.textContent = "Enter an amount of zero or more.";
     status.dataset.ok = "0";
     result.hidden = true;
     return;
   }
-  const out = taxOn(net, data.province);
+  const out = data.mode === "total" ? taxFromTotal(amount, data.province) : taxOn(amount, data.province);
+  document.getElementById("out-net").textContent = cad(out.net);
   document.getElementById("out-gst").textContent = cad(out.gst);
   document.getElementById("out-hst").textContent = cad(out.hst);
   document.getElementById("out-pst").textContent = cad(out.pst);
@@ -23,4 +23,11 @@ form?.addEventListener("submit", (event) => {
   result.hidden = false;
   status.textContent = `Place of supply: ${out.row.name}. Estimate only.`;
   status.dataset.ok = "1";
+}
+
+form?.addEventListener("submit", (event) => {
+  event.preventDefault();
+  paint();
 });
+form?.addEventListener("input", paint);
+paint();

@@ -6,7 +6,16 @@
     <title>2026 GST/HST/PST calculator (Canada)</title>
     <meta
       name="description"
-      content="Add GST, HST, or PST to a price for every province and territory. Uses 2026 CRA rates, including Nova Scotia 14% HST. Not tax advice."
+      content="Add or remove GST, HST, or PST on a Canadian price. 2026 CRA rates, including Nova Scotia 14% HST and Quebec QST on GST. Not tax advice."
+    />
+    <meta property="og:title" content="2026 GST/HST/PST calculator (Canada)" />
+    <meta
+      property="og:description"
+      content="Add or remove sales tax for every province. Free, runs in your browser."
+    />
+    <meta
+      property="og:url"
+      content="https://abstractigakis.github.io/lead-machine-demo/hst.html"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
@@ -40,10 +49,17 @@
         <div class="wrap quote-grid">
           <form id="tax-form">
             <label>
-              Price before tax (CAD)
-              <input name="net" type="number" min="0" step="0.01" value="1500" required />
+              Amount (CAD)
+              <input name="amount" type="number" min="0" step="0.01" value="1500" required />
             </label>
             <label>
+              This amount
+              <select name="mode">
+                <option value="net">is before tax</option>
+                <option value="total">already includes tax</option>
+              </select>
+            </label>
+            <label class="wide">
               Province or territory
               <select name="province"></select>
             </label>
@@ -51,8 +67,9 @@
             <p class="form-status" id="tax-status" role="status"></p>
           </form>
           <aside class="panel" id="result" hidden>
-            <h2>To charge</h2>
+            <h2>Breakdown</h2>
             <ul class="price">
+              <li><span>Before tax</span><strong id="out-net">—</strong></li>
               <li><span>GST</span><strong id="out-gst">—</strong></li>
               <li><span>HST</span><strong id="out-hst">—</strong></li>
               <li><span>PST / QST</span><strong id="out-pst">—</strong></li>
@@ -64,6 +81,26 @@
               <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html">CRA GST/HST rates</a>.
             </p>
           </aside>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <h2>2026 rates used on this page</h2>
+          <ul class="towns">
+            <li>Alberta, territories: 5% GST</li>
+            <li>British Columbia: 5% GST + 7% PST</li>
+            <li>Manitoba: 5% GST + 7% PST</li>
+            <li>Saskatchewan: 5% GST + 6% PST</li>
+            <li>Ontario: 13% HST</li>
+            <li>Nova Scotia: 14% HST</li>
+            <li>New Brunswick, Newfoundland and Labrador, PEI: 15% HST</li>
+            <li>Quebec: 5% GST + 9.975% QST on the GST-inclusive price</li>
+          </ul>
+          <p class="fine">
+            From
+            <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html">CRA GST/HST rates</a>.
+            Each tax line is rounded to the cent.
+          </p>
         </div>
       </section>
       <section id="pay" class="section muted">

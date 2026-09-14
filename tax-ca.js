@@ -19,6 +19,10 @@ const KM_2026 = {
   territory: [0.77, 0.71],
 };
 
+function cents(n) {
+  return Math.round((Number(n) + Number.EPSILON) * 100) / 100;
+}
+
 function cad(n) {
   return new Intl.NumberFormat("en-CA", {
     style: "currency",
@@ -27,13 +31,25 @@ function cad(n) {
   }).format(n);
 }
 
+function factor(code) {
+  const row = PROVINCES[code] || PROVINCES.ON;
+  if (row.hst) return 1 + row.hst;
+  if (row.qstOnGst) return (1 + row.gst) * (1 + row.pst);
+  return 1 + row.gst + row.pst;
+}
+
 function taxOn(net, code) {
   const row = PROVINCES[code] || PROVINCES.ON;
-  const gst = net * row.gst;
-  const hst = net * row.hst;
-  const pst = row.qstOnGst ? (net + gst) * row.pst : net * row.pst;
-  const tax = gst + hst + pst;
-  return { row, gst, hst, pst, tax, total: net + tax };
+  net = cents(net);
+  const gst = cents(net * row.gst);
+  const hst = cents(net * row.hst);
+  const pst = cents(row.qstOnGst ? (net + gst) * row.pst : net * row.pst);
+  const tax = cents(gst + hst + pst);
+  return { row, net, gst, hst, pst, tax, total: cents(net + tax) };
+}
+
+function taxFromTotal(total, code) {
+  return taxOn(cents(Number(total) / factor(code)), code);
 }
 
 function fillProvinceSelect(select, selected) {
@@ -44,4 +60,8 @@ function fillProvinceSelect(select, selected) {
         `<option value="${code}"${code === selected ? " selected" : ""}>${row.name}</option>`,
     )
     .join("");
+}
+
+if (typeof module !== "undefined") {
+  module.exports = { PROVINCES, KM_2026, cents, cad, taxOn, taxFromTotal, factor };
 }
