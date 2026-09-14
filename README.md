@@ -2,11 +2,11 @@
 
 Self-serve shop-site pipeline. No sales email required.
 
-- Tools hub: https://abstractigakis.github.io/lead-machine-demo/tools.html
+- Tools hub: https://abstractigakis.github.io/lead-machine-demo/
 - Generator (free): https://abstractigakis.github.io/lead-machine-demo/build.html
 - Pack after PayPal ($49 CAD): https://abstractigakis.github.io/lead-machine-demo/thanks.html
 - Offer: https://abstractigakis.github.io/lead-machine-demo/offer.html
-- HVAC demo: https://abstractigakis.github.io/lead-machine-demo/
+- HVAC demo: https://abstractigakis.github.io/lead-machine-demo/hvac.html
 - Plumbing demo: https://abstractigakis.github.io/lead-machine-demo/plumbing.html
 - TFSA estimator: https://abstractigakis.github.io/lead-machine-demo/tfsa.html
 - HST calculator: https://abstractigakis.github.io/lead-machine-demo/hst.html

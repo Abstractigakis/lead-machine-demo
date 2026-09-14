@@ -9,7 +9,7 @@ Free in-browser tools for Canadian shops. No login. Not tax advice. CRA publishe
 - Canadian invoice generator: https://abstractigakis.github.io/lead-machine-demo/invoice.html
 - 2026 TFSA / RRSP room: https://abstractigakis.github.io/lead-machine-demo/tfsa.html
 - HVAC / plumbing / electrical website generator: https://abstractigakis.github.io/lead-machine-demo/build.html
-- Hub: https://abstractigakis.github.io/lead-machine-demo/tools.html
+- Hub: https://abstractigakis.github.io/lead-machine-demo/
 
 ## Data
 - 2026 sales-tax and mileage rates (JSON): https://abstractigakis.github.io/lead-machine-demo/rates-2026.json

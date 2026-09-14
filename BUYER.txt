@@ -6,7 +6,7 @@ https://abstractigakis.github.io/lead-machine-demo/build.html
 https://abstractigakis.github.io/lead-machine-demo/thanks.html
 
 What you get
-- index.html      HVAC demo (west GTA)
+- hvac.html       HVAC demo (west GTA)
 - plumbing.html   Plumbing demo (west GTA)
 - styles.css      Shared layout
 - app.js          Quote form (saves locally; swap for SMS/email in an install)

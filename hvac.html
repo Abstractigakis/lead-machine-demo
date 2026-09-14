@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Northline HVAC — Same-day service in the west GTA</title>
+    <meta
+      name="description"
+      content="Northline HVAC repairs, replaces, and maintains heating and cooling for homes in Mississauga, Brampton, Oakville, and Burlington. Same-day windows. Upfront prices."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="ribbon" href="./"
+      >Demo only. Build yours free, or pay $49 CAD for the pack</a
+    >
+    <a class="skip" href="#quote">Skip to quote form</a>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="#">
+          <span class="mark" aria-hidden="true"></span>
+          Northline HVAC
+        </a>
+        <nav>
+          <a href="#work">Services</a>
+          <a href="#area">Service area</a>
+          <a href="#quote">Get a quote</a>
+        </nav>
+        <a class="phone" href="tel:+19055550190">(905) 555-0190</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="kicker">West GTA · TSSA · WSIB · insured</p>
+            <h1>The system dies on a Thursday. Someone should answer.</h1>
+            <p class="lede">
+              We repair and replace furnaces, heat pumps, and air conditioners
+              for homeowners who want a price before the truck rolls — not
+              after.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#quote">Request a same-day window</a>
+              <p class="fine">Typical weekday windows: 8–11, 12–3, 3–6.</p>
+            </div>
+          </div>
+          <aside class="panel" aria-label="What a visit costs">
+            <h2>What a visit actually costs</h2>
+            <ul class="price">
+              <li><span>Diagnostic</span><strong>$89</strong></li>
+              <li>
+                <span>Waived if you approve the repair</span
+                ><strong>Yes</strong>
+              </li>
+              <li><span>After-hours surcharge</span><strong>$75</strong></li>
+              <li>
+                <span>Written price before work</span><strong>Always</strong>
+              </li>
+            </ul>
+            <p class="panel-note">
+              No “we’ll know when we open it up” quotes. If we cannot name a
+              number, we do not start.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="work" class="section">
+        <div class="wrap">
+          <h2>Work we take</h2>
+          <div class="cards">
+            <article>
+              <h3>No-heat / no-cool</h3>
+              <p>
+                Igniters, capacitors, contactors, condensate, and control
+                boards. Most of these are same-day if the part is on the truck.
+              </p>
+            </article>
+            <article>
+              <h3>Replacement</h3>
+              <p>
+                14–18 SEER heat pumps and mid-efficiency gas furnaces. We size
+                to the house, not to last year’s invoice.
+              </p>
+            </article>
+            <article>
+              <h3>Maintenance</h3>
+              <p>
+                Spring and fall tune-ups with a photo report. $159, or $129 if
+                you are already on the list.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="area" class="section muted">
+        <div class="wrap split">
+          <div>
+            <h2>Service area</h2>
+            <p>
+              Mississauga, Brampton, Oakville, Burlington, and towns inside a 25
+              km ring. If you are outside it, say so on the form — we will tell
+              you no instead of arriving late.
+            </p>
+          </div>
+          <ul class="towns">
+            <li>Mississauga</li>
+            <li>Brampton</li>
+            <li>Oakville</li>
+            <li>Burlington</li>
+            <li>Milton</li>
+            <li>Etobicoke</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="quote" class="section">
+        <div class="wrap quote-grid">
+          <div>
+            <h2>Request a window</h2>
+            <p>
+              Three fields. We reply during shop hours, usually within an hour
+              on weekdays. This demo stores the request on this device so you
+              can see the full owner flow.
+            </p>
+          </div>
+          <form id="quote-form" data-store="northline-quotes" novalidate>
+            <label>
+              Name
+              <input name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="tel" autocomplete="tel" required />
+            </label>
+            <label>
+              What failed
+              <select name="issue" required>
+                <option value="">Choose one</option>
+                <option>No heat</option>
+                <option>No cooling</option>
+                <option>Strange noise</option>
+                <option>Replacement estimate</option>
+                <option>Maintenance</option>
+              </select>
+            </label>
+            <label class="wide">
+              Address or cross streets
+              <input name="address" autocomplete="street-address" required />
+            </label>
+            <button type="submit">Send request</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-bar">
+        <p>Northline HVAC · demo template for the lead-machine offer</p>
+        <p>Replace name, phone, towns, and prices. Keep the promise.</p>
+      </div>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
