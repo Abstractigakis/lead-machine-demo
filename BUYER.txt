@@ -1,0 +1,23 @@
+Lead Machine pack
+Price: $49 CAD template / $1,500 CAD install
+
+What you get
+- index.html      HVAC demo (west GTA)
+- plumbing.html   Plumbing demo (west GTA)
+- styles.css      Shared layout
+- app.js          Quote form (saves locally; swap for SMS/email in an install)
+- offer.html      The sales page for this pack
+- chickadee.html  Labeled proposal mock only. Not an official café site. noindex.
+
+How to customize
+1. Change the shop name, phone, towns, and prices.
+2. Keep the promise on the page (price before the truck).
+3. Point the form at your email or SMS in a live install.
+4. Host the folder on any static host.
+
+Install terms
+- $750 CAD PayPal goods-and-services deposit before work
+- Five-day delivery for one trade and one metro
+- One revision after it is live
+- Balance on the day it goes live
+- Unused deposit refunded if work has not started

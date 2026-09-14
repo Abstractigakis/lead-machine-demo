@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Proposal — Chickadee Café one-pager (not the official site)</title>
+    <meta
+      name="description"
+      content="Unpaid proposal mock for a Chickadee Café hours and location page. Not affiliated with the Town of Newmarket or A Million Mouthfuls."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="ribbon" href="./offer.html"
+      >Proposal only. Not the official Chickadee Café. $750 CAD to make this yours before Friday.</a
+    >
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="#">
+          <span class="mark" aria-hidden="true"></span>
+          Chickadee Café
+        </a>
+        <nav>
+          <a href="#visit">Visit</a>
+          <a href="#hours">Hours</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <a class="phone" href="tel:+12899266821">(289) 926-6821</a>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="kicker">Mulock House · Mulock Park · Newmarket</p>
+            <h1>Coffee and a plate on the veranda.</h1>
+            <p class="lede">
+              Inside the historic Mulock House, looking over the Great Lawn.
+              Operated by A Million Mouthfuls Catering. The Town of Newmarket
+              owns the café name.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#visit">Get directions</a>
+              <p class="fine">Grand opening weekend: 18–20 September 2026.</p>
+            </div>
+          </div>
+          <aside class="panel">
+            <h2>Opening weekend</h2>
+            <ul class="price">
+              <li><span>Friday 18 Sep</span><strong>Event hours</strong></li>
+              <li><span>Saturday 19 Sep</span><strong>Event hours</strong></li>
+              <li><span>Sunday 20 Sep</span><strong>Event hours</strong></li>
+              <li><span>Regular hours</span><strong>From 21 Sep</strong></li>
+            </ul>
+            <p class="panel-note">
+              Daily clock times are left blank on purpose. Those come from the
+              operator, not this mock.
+            </p>
+          </aside>
+        </div>
+      </section>
+      <section id="visit" class="section">
+        <div class="wrap split">
+          <div>
+            <h2>Where</h2>
+            <p>
+              Mulock House, 395 Mulock Drive, Newmarket. Seating inside and on
+              the veranda. Window service to the patio during opening weekend.
+            </p>
+          </div>
+          <p>
+            <a href="https://maps.google.com/?q=395+Mulock+Drive+Newmarket+ON">Open in Maps</a>
+          </p>
+        </div>
+      </section>
+      <section id="hours" class="section muted">
+        <div class="wrap">
+          <h2>Menu</h2>
+          <p>
+            The live menu is not copied here. If this becomes the real page, the
+            operator’s items and prices go in this block the same day.
+          </p>
+        </div>
+      </section>
+      <section id="contact" class="section">
+        <div class="wrap quote-grid">
+          <div>
+            <h2>Catering and the café</h2>
+            <p>
+              Same kitchen family: A Million Mouthfuls, 200 Mulock Dr Unit 3.
+              This form is a demo and only stores on this device.
+            </p>
+          </div>
+          <form id="quote-form" data-store="chickadee-proposal" novalidate>
+            <label>Name <input name="name" autocomplete="name" required /></label>
+            <label>Phone <input name="phone" type="tel" autocomplete="tel" required /></label>
+            <label>
+              About
+              <select name="issue" required>
+                <option value="">Choose one</option>
+                <option>Café hours</option>
+                <option>Catering</option>
+                <option>Private event</option>
+              </select>
+            </label>
+            <label class="wide">Message <input name="address" required /></label>
+            <button type="submit">Send</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="foot">
+      <div class="wrap foot-bar">
+        <p>Proposal mock. Not affiliated. Facts from the Town of Newmarket public pages.</p>
+        <p><a href="./offer.html">Lead Machine</a></p>
+      </div>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>
