@@ -13,6 +13,9 @@ Primary hub (custom domain): https://abstractigakis.com/shop-tools
 - 2026 mileage: https://abstractigakis.com/ca/km.html
 - Invoice: https://abstractigakis.com/ca/invoice.html
 - TFSA estimator: https://abstractigakis.com/ca/tfsa.html
+- 2026 TFSA / RRSP limits: https://abstractigakis.com/shop-tools/tfsa-2026
+- CPP / EI calculator: https://abstractigakis.com/ca/cpp.html
+- 2026 CPP / EI rates: https://abstractigakis.com/shop-tools/cpp-ei-2026
 
 github.io mirror: https://abstractigakis.github.io/lead-machine-demo/
 

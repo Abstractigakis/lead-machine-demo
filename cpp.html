@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="canonical" href="https://abstractigakis.com/ca/cpp.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 CPP, CPP2, and EI calculator (Canada)</title>
+    <meta
+      name="description"
+      content="Estimate 2026 employee CPP or QPP, CPP2, and EI from pensionable and insurable pay. YMPE $74,600. Not tax advice."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="ribbon" href="./tools.html"
+      >Also: HST, mileage, invoices, and a $49 shop-site pack</a
+    >
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./cpp.html">
+          <span class="mark" aria-hidden="true"></span>
+          Payroll
+        </a>
+        <nav>
+          <a href="./tools.html">All tools</a>
+          <a href="./hst.html">HST</a>
+          <a href="#pay">Pay $9</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="kicker">Canada · payroll year 2026 · runs on this device</p>
+          <h1>How much CPP and EI come off this pay?</h1>
+          <p class="lede">
+            Uses CRA 2026 YMPE $74,600, CPP 5.95%, CPP2 4% to $85,000, and EI
+            1.63% on $68,900. Quebec uses QPP 6.30% and EI 1.30%. This is an
+            annual estimate, not a pay-period table.
+            <a href="https://abstractigakis.com/shop-tools/cpp-ei-2026"
+              >2026 rates</a
+            >.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap quote-grid">
+          <form id="cpp-form">
+            <label>
+              Pensionable pay this year (CAD)
+              <input
+                name="pensionable"
+                type="number"
+                min="0"
+                step="1"
+                value="74600"
+                required
+              />
+            </label>
+            <label>
+              Insurable pay this year (CAD)
+              <input
+                name="insurable"
+                type="number"
+                min="0"
+                step="1"
+                value="68900"
+                required
+              />
+            </label>
+            <label>
+              Where the job is
+              <select name="region">
+                <option value="ca">Outside Quebec (CPP)</option>
+                <option value="qc">Quebec (QPP + lower EI)</option>
+              </select>
+            </label>
+            <button type="submit">Estimate deductions</button>
+            <p class="form-status" id="cpp-status" role="status"></p>
+          </form>
+          <aside class="panel" id="result" hidden>
+            <h2>Employee / employer year</h2>
+            <ul class="price">
+              <li>
+                <span>CPP or QPP</span><strong id="out-cpp">—</strong>
+              </li>
+              <li>
+                <span>CPP2 / QPP2</span><strong id="out-cpp2">—</strong>
+              </li>
+              <li>
+                <span>EI (employee)</span><strong id="out-ei">—</strong>
+              </li>
+              <li>
+                <span>Employee total</span><strong id="out-employee">—</strong>
+              </li>
+              <li>
+                <span>Employer match + EI</span
+                ><strong id="out-employer">—</strong>
+              </li>
+            </ul>
+            <p class="panel-note">
+              Employer column is CPP/QPP match plus 1.4× EI. QPIP is not
+              included. Confirm with CRA or Revenu Québec tables.
+            </p>
+          </aside>
+        </div>
+      </section>
+      <section id="pay" class="section muted">
+        <div class="wrap">
+          <h2>If this saved a payroll setup hour</h2>
+          <p>
+            The calculator is free. $9 CAD via PayPal goods and services keeps
+            it online. Not tax advice, not a payroll service.
+          </p>
+          <p>
+            <a
+              class="btn"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ericstratigakis%40gmail.com&amp;item_name=Payroll%20calculator%20support&amp;amount=9.00&amp;currency_code=CAD&amp;no_shipping=1&amp;button_subtype=services&amp;return=https%3A%2F%2Fabstractigakis.com%2Fca%2Fthanks.html&amp;rm=1"
+              >Pay $9 CAD</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./tax-ca.js"></script>
+    <script src="./cpp.js"></script>
+  </body>
+</html>

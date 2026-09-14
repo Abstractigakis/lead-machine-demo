@@ -11,6 +11,8 @@ Free in-browser tools for Canadian shops. No login. Not tax advice. CRA publishe
 - CRA 2026 mileage allowance: https://abstractigakis.com/ca/km.html
 - Canadian invoice generator: https://abstractigakis.com/ca/invoice.html
 - 2026 TFSA / RRSP room: https://abstractigakis.com/ca/tfsa.html
+- 2026 CPP / EI calculator: https://abstractigakis.com/ca/cpp.html
+- 2026 CPP / EI rates: https://abstractigakis.com/shop-tools/cpp-ei-2026
 - HVAC / plumbing / electrical website generator: https://abstractigakis.com/ca/build.html
 
 ## Data

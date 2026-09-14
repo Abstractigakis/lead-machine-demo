@@ -62,6 +62,47 @@ function fillProvinceSelect(select, selected, lang) {
     .join("");
 }
 
+const PAYROLL_2026 = {
+  ybe: 3500,
+  ympe: 74600,
+  yampe: 85000,
+  mie: 68900,
+  cpp2Rate: 0.04,
+  cpp2Max: 416,
+  ca: { cppRate: 0.0595, cppMax: 4230.45, eiRate: 0.0163, eiMax: 1123.07, eiErMax: 1572.3 },
+  qc: { cppRate: 0.063, cppMax: 4479.3, eiRate: 0.013, eiMax: 895.7, eiErMax: 1253.98 },
+};
+
+function payroll2026(pensionable, insurable, region) {
+  const plan = region === "qc" ? PAYROLL_2026.qc : PAYROLL_2026.ca;
+  const p = Math.max(0, Number(pensionable) || 0);
+  const i = Math.max(0, Number(insurable) || 0);
+  const cppEarn = Math.min(Math.max(0, p - PAYROLL_2026.ybe), PAYROLL_2026.ympe - PAYROLL_2026.ybe);
+  const cpp = Math.min(cents(cppEarn * plan.cppRate), plan.cppMax);
+  const cpp2Earn = Math.min(Math.max(0, p - PAYROLL_2026.ympe), PAYROLL_2026.yampe - PAYROLL_2026.ympe);
+  const cpp2 = Math.min(cents(cpp2Earn * PAYROLL_2026.cpp2Rate), PAYROLL_2026.cpp2Max);
+  const ei = Math.min(cents(Math.min(i, PAYROLL_2026.mie) * plan.eiRate), plan.eiMax);
+  const eiEmployer = Math.min(cents(ei * 1.4), plan.eiErMax);
+  return {
+    cpp,
+    cpp2,
+    ei,
+    eiEmployer,
+    employee: cents(cpp + cpp2 + ei),
+    employer: cents(cpp + cpp2 + eiEmployer),
+  };
+}
+
 if (typeof module !== "undefined") {
-  module.exports = { PROVINCES, KM_2026, cents, cad, taxOn, taxFromTotal, factor };
+  module.exports = {
+    PROVINCES,
+    KM_2026,
+    PAYROLL_2026,
+    cents,
+    cad,
+    taxOn,
+    taxFromTotal,
+    factor,
+    payroll2026,
+  };
 }
