@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Harbourline Plumbing — Burst pipes, same day</title>
+    <meta
+      name="description"
+      content="Harbourline Plumbing handles leaks, water heaters, and drain backups for homes in Mississauga, Oakville, and Burlington. Price before the truck. Same-day windows."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#quote">Skip to quote form</a>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="#">
+          <span class="mark" aria-hidden="true"></span>
+          Harbourline Plumbing
+        </a>
+        <nav>
+          <a href="#work">Services</a>
+          <a href="#area">Service area</a>
+          <a href="#quote">Get a quote</a>
+        </nav>
+        <a class="phone" href="tel:+19055550114">(905) 555-0114</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="kicker">West GTA · licensed · insured</p>
+            <h1>Water on the floor. Someone should pick up.</h1>
+            <p class="lede">
+              We stop leaks, swap water heaters, and clear backups for homeowners
+              who want a written price before the truck leaves the shop.
+            </p>
+            <div class="hero-actions">
+              <a class="btn" href="#quote">Request a same-day window</a>
+              <p class="fine">Typical weekday windows: 8–11, 12–3, 3–6.</p>
+            </div>
+          </div>
+          <aside class="panel" aria-label="What a visit costs">
+            <h2>What a visit actually costs</h2>
+            <ul class="price">
+              <li><span>Diagnostic</span><strong>$95</strong></li>
+              <li><span>Waived if you approve the repair</span><strong>Yes</strong></li>
+              <li><span>After-hours surcharge</span><strong>$85</strong></li>
+              <li><span>Written price before work</span><strong>Always</strong></li>
+            </ul>
+            <p class="panel-note">
+              If we cannot name a number, we do not open the wall.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="work" class="section">
+        <div class="wrap">
+          <h2>Work we take</h2>
+          <div class="cards">
+            <article>
+              <h3>Leaks and bursts</h3>
+              <p>
+                Supply lines, cartridge taps, and frozen-pipe thaw. Most of these
+                are same-day if the fitting is on the truck.
+              </p>
+            </article>
+            <article>
+              <h3>Water heaters</h3>
+              <p>
+                Tank and tankless replacements sized to the house. Permit handling
+                included in the written price.
+              </p>
+            </article>
+            <article>
+              <h3>Drains</h3>
+              <p>
+                Kitchen, tub, and main-line backups. Camera when we cannot feel
+                the stop from the cleanout.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="area" class="section muted">
+        <div class="wrap split">
+          <div>
+            <h2>Service area</h2>
+            <p>
+              Mississauga, Oakville, Burlington, and Milton. Outside that ring
+              we will tell you no on the form instead of arriving late.
+            </p>
+          </div>
+          <ul class="towns">
+            <li>Mississauga</li>
+            <li>Oakville</li>
+            <li>Burlington</li>
+            <li>Milton</li>
+            <li>Clarkson</li>
+            <li>Bronte</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="quote" class="section">
+        <div class="wrap quote-grid">
+          <div>
+            <h2>Request a window</h2>
+            <p>
+              Four fields. We reply during shop hours. This demo stores the
+              request on this device so you can see the owner flow.
+            </p>
+          </div>
+          <form id="quote-form" data-store="harbourline-quotes" novalidate>
+            <label>
+              Name
+              <input name="name" autocomplete="name" required />
+            </label>
+            <label>
+              Phone
+              <input name="phone" type="tel" autocomplete="tel" required />
+            </label>
+            <label>
+              What failed
+              <select name="issue" required>
+                <option value="">Choose one</option>
+                <option>Leak or burst</option>
+                <option>No hot water</option>
+                <option>Backup / drain</option>
+                <option>Water heater replacement</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label class="wide">
+              Address or cross streets
+              <input name="address" autocomplete="street-address" required />
+            </label>
+            <button type="submit">Send request</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-bar">
+        <p>Harbourline Plumbing · second demo in the lead-machine pack</p>
+        <p>Same files. Different trade. That is the product.</p>
+      </div>
+    </footer>
+    <script src="./app.js"></script>
+  </body>
+</html>

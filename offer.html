@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lead Machine — a site that takes the job</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .offer-hero {
+        padding: 72px 0 24px;
+      }
+      .tiers {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+        margin: 28px 0 8px;
+      }
+      .tiers article {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        padding: 20px 20px 12px;
+      }
+      .tiers strong {
+        font-family: "Avenir Next", "Segoe UI", Helvetica, sans-serif;
+        font-size: 1.6rem;
+      }
+      @media (max-width: 800px) {
+        .tiers {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./index.html">
+          <span class="mark" aria-hidden="true"></span>
+          Lead Machine
+        </a>
+        <nav>
+          <a href="./index.html">HVAC demo</a>
+          <a href="./plumbing.html">Plumbing demo</a>
+          <a href="#buy">Pricing</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="offer-hero">
+        <div class="wrap">
+          <p class="kicker">For HVAC, plumbing, and similar GTA shops</p>
+          <h1>A site that answers when the system fails.</h1>
+          <p class="lede">
+            Most contractor sites hide the phone under stock photos. This is a
+            one-page machine: price before the truck, a short form, and a text
+            to the shop. PayPal deposit before any work starts.
+          </p>
+        </div>
+      </section>
+      <section id="buy" class="section">
+        <div class="wrap">
+          <div class="tiers">
+            <article>
+              <h2>Template</h2>
+              <p><strong>$49 CAD</strong></p>
+              <p>
+                HVAC and plumbing demos, CSS, and the form script. You change
+                name, towns, and prices. No monthly fee.
+              </p>
+              <p class="fine">
+                Pay as goods and services on PayPal. Files sent after the
+                payment clears.
+              </p>
+            </article>
+            <article>
+              <h2>Install</h2>
+              <p><strong>$1,500 CAD</strong></p>
+              <p>
+                Your name, area, prices, and form live in five days. $750 CAD
+                deposit on PayPal (goods and services). You keep the files.
+              </p>
+              <ul>
+                <li>Custom copy for one trade and one metro</li>
+                <li>Form emails or texts the shop</li>
+                <li>Phone number stays visible on a phone</li>
+                <li>One revision after you see it live</li>
+              </ul>
+            </article>
+          </div>
+          <p>
+            Not included: ads, ranking you on Google in a week, or a 40-page
+            brochure site. Those are different jobs.
+          </p>
+          <p class="fine">
+            Deposit: PayPal goods and services, $750 CAD, memo “Lead Machine
+            deposit — {shop name}”. Balance due on the day it goes live.
+            No work without the deposit. Refund the unused deposit if we have
+            not started.
+          </p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
