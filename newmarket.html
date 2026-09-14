@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="ribbon" href="./build.html">Demo only. Build yours free, or pay $49 CAD for the pack</a>
+    <a class="ribbon" href="./build.html"
+      >Demo only. Build yours free, or pay $49 CAD for the pack</a
+    >
     <a class="skip" href="#quote">Skip to quote form</a>
     <header class="top">
       <div class="wrap bar">
@@ -34,8 +36,8 @@
             <p class="kicker">York Region · TSSA · WSIB · insured</p>
             <h1>The system dies on a Thursday. Someone should answer.</h1>
             <p class="lede">
-              Furnaces, heat pumps, and air conditioners for Newmarket,
-              Aurora, and East Gwillimbury. Price before the truck rolls.
+              Furnaces, heat pumps, and air conditioners for Newmarket, Aurora,
+              and East Gwillimbury. Price before the truck rolls.
             </p>
             <div class="hero-actions">
               <a class="btn" href="#quote">Request a same-day window</a>
@@ -46,11 +48,18 @@
             <h2>What a visit actually costs</h2>
             <ul class="price">
               <li><span>Diagnostic</span><strong>$89</strong></li>
-              <li><span>Waived if you approve the repair</span><strong>Yes</strong></li>
+              <li>
+                <span>Waived if you approve the repair</span
+                ><strong>Yes</strong>
+              </li>
               <li><span>After-hours surcharge</span><strong>$75</strong></li>
-              <li><span>Written price before work</span><strong>Always</strong></li>
+              <li>
+                <span>Written price before work</span><strong>Always</strong>
+              </li>
             </ul>
-            <p class="panel-note">If we cannot name a number, we do not start.</p>
+            <p class="panel-note">
+              If we cannot name a number, we do not start.
+            </p>
           </aside>
         </div>
       </section>
@@ -60,15 +69,23 @@
           <div class="cards">
             <article>
               <h3>No-heat / no-cool</h3>
-              <p>Igniters, capacitors, contactors, and boards. Same-day if the part is on the truck.</p>
+              <p>
+                Igniters, capacitors, contactors, and boards. Same-day if the
+                part is on the truck.
+              </p>
             </article>
             <article>
               <h3>Replacement</h3>
-              <p>Heat pumps and mid-efficiency gas furnaces sized to the house.</p>
+              <p>
+                Heat pumps and mid-efficiency gas furnaces sized to the house.
+              </p>
             </article>
             <article>
               <h3>Maintenance</h3>
-              <p>Spring and fall tune-ups with a photo report. $159, or $129 on the list.</p>
+              <p>
+                Spring and fall tune-ups with a photo report. $159, or $129 on
+                the list.
+              </p>
             </article>
           </div>
         </div>
@@ -78,8 +95,8 @@
           <div>
             <h2>Service area</h2>
             <p>
-              Newmarket, Aurora, East Gwillimbury, Holland Landing, and Bradford.
-              Outside that ring we will tell you no on the form.
+              Newmarket, Aurora, East Gwillimbury, Holland Landing, and
+              Bradford. Outside that ring we will tell you no on the form.
             </p>
           </div>
           <ul class="towns">
@@ -96,11 +113,18 @@
         <div class="wrap quote-grid">
           <div>
             <h2>Request a window</h2>
-            <p>This demo stores the request on this device so you can see the owner flow.</p>
+            <p>
+              This demo stores the request on this device so you can see the
+              owner flow.
+            </p>
           </div>
           <form id="quote-form" data-store="york-quotes" novalidate>
-            <label>Name <input name="name" autocomplete="name" required /></label>
-            <label>Phone <input name="phone" type="tel" autocomplete="tel" required /></label>
+            <label
+              >Name <input name="name" autocomplete="name" required
+            /></label>
+            <label
+              >Phone <input name="phone" type="tel" autocomplete="tel" required
+            /></label>
             <label>
               What failed
               <select name="issue" required>
@@ -112,7 +136,10 @@
                 <option>Maintenance</option>
               </select>
             </label>
-            <label class="wide">Address or cross streets <input name="address" autocomplete="street-address" required /></label>
+            <label class="wide"
+              >Address or cross streets
+              <input name="address" autocomplete="street-address" required
+            /></label>
             <button type="submit">Send request</button>
             <p class="form-status" id="form-status" role="status"></p>
           </form>

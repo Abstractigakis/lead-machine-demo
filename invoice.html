@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Free Canadian invoice generator (GST/HST)</title>
+    <meta
+      name="description"
+      content="Type the job, pick the province, print or download an invoice with 2026 GST/HST/PST. Runs in your browser. $9 keeps the tool online."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <style>
+      .invoice-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin: 16px 0 0;
+      }
+      @media print {
+        .top,
+        .ribbon,
+        .hero,
+        #pay,
+        .invoice-actions,
+        form button {
+          display: none !important;
+        }
+        body {
+          background: #fff;
+        }
+        #bill {
+          border: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="ribbon" href="./build.html">Same idea for your website — generate a shop page, $49 CAD</a>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./tools.html">
+          <span class="mark" aria-hidden="true"></span>
+          Invoice
+        </a>
+        <nav>
+          <a href="./tools.html">All tools</a>
+          <a href="./hst.html">HST</a>
+          <a href="#pay">Pay $9</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="kicker">No account · print or download · 2026 rates</p>
+          <h1>Write the invoice. Tax fills in.</h1>
+          <p class="lede">
+            For shops that still send a PDF from the truck. Nothing is stored
+            on a server.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap quote-grid">
+          <form id="inv-form">
+            <label>Your shop<input name="shop" value="Cedar HVAC" required /></label>
+            <label>Invoice #<input name="number" value="1044" required /></label>
+            <label>Bill to<input name="client" value="Jordan Lee" required /></label>
+            <label>
+              Province
+              <select name="province"></select>
+            </label>
+            <label class="wide">Work done<input name="work" value="Furnace diagnostic and igniter" required /></label>
+            <label>Amount before tax<input name="net" type="number" min="0" step="0.01" value="289" required /></label>
+            <button type="submit">Update invoice</button>
+            <div class="invoice-actions">
+              <button id="print" type="button">Print / save PDF</button>
+              <button id="download" type="button">Download HTML</button>
+            </div>
+          </form>
+          <aside class="panel" id="bill">
+            <h2 id="bill-shop">Cedar HVAC</h2>
+            <p class="fine" id="bill-meta">Invoice 1044</p>
+            <ul class="price">
+              <li><span>Bill to</span><strong id="bill-client">Jordan Lee</strong></li>
+              <li><span>Work</span><strong id="bill-work">—</strong></li>
+              <li><span>Subtotal</span><strong id="bill-net">—</strong></li>
+              <li><span>Tax</span><strong id="bill-tax">—</strong></li>
+              <li><span>Total due</span><strong id="bill-total">—</strong></li>
+            </ul>
+            <p class="panel-note" id="bill-note"></p>
+          </aside>
+        </div>
+      </section>
+      <section id="pay" class="section muted">
+        <div class="wrap">
+          <h2>Keep this generator online</h2>
+          <p>$9 CAD, PayPal goods and services. Not bookkeeping, not tax advice.</p>
+          <p>
+            <a
+              class="btn"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ericstratigakis%40gmail.com&amp;item_name=Invoice%20generator%20support&amp;amount=9.00&amp;currency_code=CAD&amp;no_shipping=1&amp;button_subtype=services&amp;return=https%3A%2F%2Fabstractigakis.github.io%2Flead-machine-demo%2Fthanks.html&amp;rm=1"
+              >Pay $9 CAD</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./tax-ca.js"></script>
+    <script src="./invoice.js"></script>
+  </body>
+</html>

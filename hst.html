@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 GST/HST/PST calculator (Canada)</title>
+    <meta
+      name="description"
+      content="Add GST, HST, or PST to a price for every province and territory. Uses 2026 CRA rates, including Nova Scotia 14% HST. Not tax advice."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="ribbon" href="./build.html">Need a shop site? Generate one and pay $49 CAD</a>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./tools.html">
+          <span class="mark" aria-hidden="true"></span>
+          Tax on a job
+        </a>
+        <nav>
+          <a href="./tools.html">All tools</a>
+          <a href="./invoice.html">Invoice</a>
+          <a href="#pay">Pay $9</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="kicker">CRA rates · 2026 · runs on this device</p>
+          <h1>How much tax do you add to this invoice?</h1>
+          <p class="lede">
+            Pick the place of supply. Quebec QST is calculated on the price
+            including GST. Confirm on Canada.ca before you file.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap quote-grid">
+          <form id="tax-form">
+            <label>
+              Price before tax (CAD)
+              <input name="net" type="number" min="0" step="0.01" value="1500" required />
+            </label>
+            <label>
+              Province or territory
+              <select name="province"></select>
+            </label>
+            <button type="submit">Calculate tax</button>
+            <p class="form-status" id="tax-status" role="status"></p>
+          </form>
+          <aside class="panel" id="result" hidden>
+            <h2>To charge</h2>
+            <ul class="price">
+              <li><span>GST</span><strong id="out-gst">—</strong></li>
+              <li><span>HST</span><strong id="out-hst">—</strong></li>
+              <li><span>PST / QST</span><strong id="out-pst">—</strong></li>
+              <li><span>Tax</span><strong id="out-tax">—</strong></li>
+              <li><span>Total</span><strong id="out-total">—</strong></li>
+            </ul>
+            <p class="panel-note">
+              Source:
+              <a href="https://www.canada.ca/en/revenue-agency/services/tax/businesses/topics/gst-hst-businesses/charge-collect-which-rate.html">CRA GST/HST rates</a>.
+            </p>
+          </aside>
+        </div>
+      </section>
+      <section id="pay" class="section muted">
+        <div class="wrap">
+          <h2>If this saved a remittance mistake</h2>
+          <p>
+            The calculator is free. $9 CAD via PayPal goods and services keeps
+            the tools online. Not tax advice.
+          </p>
+          <p>
+            <a
+              class="btn"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ericstratigakis%40gmail.com&amp;item_name=HST%20calculator%20support&amp;amount=9.00&amp;currency_code=CAD&amp;no_shipping=1&amp;button_subtype=services&amp;return=https%3A%2F%2Fabstractigakis.github.io%2Flead-machine-demo%2Fthanks.html&amp;rm=1"
+              >Pay $9 CAD</a
+            >
+          </p>
+          <p class="fine">
+            Also: <a href="./invoice.html">print a Canadian invoice</a>,
+            <a href="./km.html">2026 mileage rates</a>,
+            <a href="./build.html">shop website generator</a>.
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./tax-ca.js"></script>
+    <script src="./hst.js"></script>
+  </body>
+</html>

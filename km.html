@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2026 CRA mileage allowance calculator (Canada)</title>
+    <meta
+      name="description"
+      content="Estimate a 2026 tax-exempt automobile allowance: 73¢/km for the first 5,000 km in the provinces, 67¢ after. Territories 77¢ / 71¢. Not tax advice."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="ribbon" href="./build.html">HVAC and plumbing shops: generate a site, $49 CAD pack</a>
+    <header class="top">
+      <div class="wrap bar">
+        <a class="brand" href="./tools.html">
+          <span class="mark" aria-hidden="true"></span>
+          Kilometres
+        </a>
+        <nav>
+          <a href="./tools.html">All tools</a>
+          <a href="./hst.html">HST</a>
+          <a href="#pay">Pay $9</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <p class="kicker">CRA prescribed rates · 2026 · runs on this device</p>
+          <h1>What is a reasonable per-kilometre allowance this year?</h1>
+          <p class="lede">
+            Uses the Department of Finance 2026 tax-exempt allowance: 73 cents
+            for the first 5,000 km in the provinces, 67 cents after. Territories
+            are 77 / 71. Your records still have to show the kilometres were
+            business.
+          </p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap quote-grid">
+          <form id="km-form">
+            <label>
+              Business kilometres
+              <input name="km" type="number" min="0" step="1" value="8000" required />
+            </label>
+            <label>
+              Where
+              <select name="where">
+                <option value="province">Province</option>
+                <option value="territory">Territory (YT, NT, NU)</option>
+              </select>
+            </label>
+            <button type="submit">Estimate allowance</button>
+            <p class="form-status" id="km-status" role="status"></p>
+          </form>
+          <aside class="panel" id="result" hidden>
+            <h2>Allowance</h2>
+            <ul class="price">
+              <li><span>First 5,000 km</span><strong id="out-first">—</strong></li>
+              <li><span>Additional km</span><strong id="out-rest">—</strong></li>
+              <li><span>Total</span><strong id="out-total">—</strong></li>
+            </ul>
+            <p class="panel-note">
+              Source:
+              <a href="https://www.canada.ca/en/department-finance/news/2026/01/government-announces-the-2026-automobile-deduction-limits-and-expense-benefit-rates-for-businesses.html">Finance Canada, January 2026</a>.
+            </p>
+          </aside>
+        </div>
+      </section>
+      <section id="pay" class="section muted">
+        <div class="wrap">
+          <h2>If this saved a logbook fight</h2>
+          <p>
+            Free to use. $9 CAD via PayPal goods and services keeps it online.
+            Not tax advice, not a filing service.
+          </p>
+          <p>
+            <a
+              class="btn"
+              href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=ericstratigakis%40gmail.com&amp;item_name=Mileage%20calculator%20support&amp;amount=9.00&amp;currency_code=CAD&amp;no_shipping=1&amp;button_subtype=services&amp;return=https%3A%2F%2Fabstractigakis.github.io%2Flead-machine-demo%2Fthanks.html&amp;rm=1"
+              >Pay $9 CAD</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./tax-ca.js"></script>
+    <script src="./km.js"></script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-CA">
   <head>
     <meta charset="utf-8" />
@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <a class="ribbon" href="./offer.html">Also: a $1,500 site for GTA trades — see Lead Machine</a>
+    <a class="ribbon" href="./tools.html"
+      >Also: HST, mileage, invoices, and a $49 shop-site pack</a
+    >
     <header class="top">
       <div class="wrap bar">
         <a class="brand" href="./tfsa.html">
@@ -19,7 +21,8 @@
           Room check
         </a>
         <nav>
-          <a href="./offer.html">Lead Machine</a>
+          <a href="./tools.html">All tools</a>
+          <a href="./hst.html">HST</a>
           <a href="#pay">Pay $9</a>
         </nav>
       </div>
@@ -30,9 +33,9 @@
           <p class="kicker">Canada · 2026 limits · runs on this device</p>
           <h1>How much TFSA and RRSP room do you still have?</h1>
           <p class="lede">
-            Uses CRA’s 2026 TFSA dollar limit of $7,000 and the 2026 RRSP
-            dollar limit of $33,810. This is an estimate. Your Notice of
-            Assessment wins.
+            Uses CRA’s 2026 TFSA dollar limit of $7,000 and the 2026 RRSP dollar
+            limit of $33,810. This is an estimate. Your Notice of Assessment
+            wins.
           </p>
         </div>
       </section>
@@ -41,27 +44,69 @@
           <form id="room-form">
             <label>
               Year you turned 18 (or became a resident)
-              <input name="age18" type="number" min="1991" max="2026" value="2009" required />
+              <input
+                name="age18"
+                type="number"
+                min="1991"
+                max="2026"
+                value="2009"
+                required
+              />
             </label>
             <label>
               TFSA contributions still in the account (CAD)
-              <input name="tfsaIn" type="number" min="0" step="1" value="0" required />
+              <input
+                name="tfsaIn"
+                type="number"
+                min="0"
+                step="1"
+                value="0"
+                required
+              />
             </label>
             <label>
               TFSA withdrawn in 2025 (comes back in 2026)
-              <input name="tfsaOut25" type="number" min="0" step="1" value="0" required />
+              <input
+                name="tfsaOut25"
+                type="number"
+                min="0"
+                step="1"
+                value="0"
+                required
+              />
             </label>
             <label>
               2025 earned income (for 2026 RRSP)
-              <input name="earned" type="number" min="0" step="1" value="0" required />
+              <input
+                name="earned"
+                type="number"
+                min="0"
+                step="1"
+                value="0"
+                required
+              />
             </label>
             <label>
               Unused RRSP room carried forward
-              <input name="rrspCarry" type="number" min="0" step="1" value="0" required />
+              <input
+                name="rrspCarry"
+                type="number"
+                min="0"
+                step="1"
+                value="0"
+                required
+              />
             </label>
             <label>
               Pension adjustment (if any)
-              <input name="pa" type="number" min="0" step="1" value="0" required />
+              <input
+                name="pa"
+                type="number"
+                min="0"
+                step="1"
+                value="0"
+                required
+              />
             </label>
             <button type="submit">Estimate room</button>
             <p class="form-status" id="room-status" role="status"></p>
@@ -69,13 +114,23 @@
           <aside class="panel" id="result" hidden>
             <h2>Estimate</h2>
             <ul class="price">
-              <li><span>TFSA room now</span><strong id="tfsa-out">—</strong></li>
-              <li><span>Lifetime TFSA if never used</span><strong id="tfsa-life">—</strong></li>
-              <li><span>2026 RRSP room</span><strong id="rrsp-out">—</strong></li>
+              <li>
+                <span>TFSA room now</span><strong id="tfsa-out">—</strong>
+              </li>
+              <li>
+                <span>Lifetime TFSA if never used</span
+                ><strong id="tfsa-life">—</strong>
+              </li>
+              <li>
+                <span>2026 RRSP room</span><strong id="rrsp-out">—</strong>
+              </li>
             </ul>
             <p class="panel-note">
               Over-contributing a TFSA can cost 1% per month. Confirm in
-              <a href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account/contributing/calculate-room.html">CRA’s room guide</a>.
+              <a
+                href="https://www.canada.ca/en/revenue-agency/services/tax/individuals/topics/tax-free-savings-account/contributing/calculate-room.html"
+                >CRA’s room guide</a
+              >.
             </p>
           </aside>
         </div>
@@ -99,7 +154,10 @@
     </main>
     <footer class="foot">
       <div class="wrap foot-bar">
-        <p>Limits from CRA / published 2026 dollar amounts. Verify before you contribute.</p>
+        <p>
+          Limits from CRA / published 2026 dollar amounts. Verify before you
+          contribute.
+        </p>
         <p><a href="./offer.html">Lead Machine</a> for GTA shops.</p>
       </div>
     </footer>
