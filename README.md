@@ -19,6 +19,8 @@ Primary hub (custom domain): https://abstractigakis.com/shop-tools
 
 Machine-readable 2026 rates (GST/HST, mileage, CPP/QPP/EI, TFSA/RRSP):
 https://abstractigakis.com/rates-2026.json
+https://abstractigakis.com/sales-tax-2026.csv
+https://abstractigakis.com/payroll-2026.csv
 
 github.io mirror: https://abstractigakis.github.io/lead-machine-demo/
 

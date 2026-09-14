@@ -1,0 +1,7 @@
+plan,region,employee_rate,employee_max,notes
+CPP,outside_quebec,0.0595,4230.45,YMPE 74600 YBE 3500
+CPP2,outside_quebec,0.04,416,YAMPE 85000
+QPP,quebec,0.063,4479.30,same YMPE/YBE
+QPP2,quebec,0.04,416,same YAMPE band
+EI,outside_quebec,0.0163,1123.07,MIE 68900 employer 1.4x
+EI,quebec,0.013,895.70,QPIP is separate

@@ -1,0 +1,14 @@
+code,name,gst,pst,hst,qst_base
+AB,Alberta,0.05,0,0,
+BC,British Columbia,0.05,0.07,0,
+MB,Manitoba,0.05,0.07,0,
+NB,New Brunswick,0,0,0.15,
+NL,Newfoundland and Labrador,0,0,0.15,
+NS,Nova Scotia,0,0,0.14,
+NT,Northwest Territories,0.05,0,0,
+NU,Nunavut,0.05,0,0,
+ON,Ontario,0,0,0.13,
+PE,Prince Edward Island,0,0,0.15,
+QC,Quebec,0.05,0.09975,0,selling_price_excluding_gst
+SK,Saskatchewan,0.05,0.06,0,
+YT,Yukon,0.05,0,0,
